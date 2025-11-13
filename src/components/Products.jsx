@@ -159,23 +159,22 @@ export function Products() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+ const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
+      y: 0,
+      transition: { duration: 0.5, staggerChildren: 0.08, delayChildren: 0 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30, scale: 0.98 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+      scale: 1,
+      transition: { duration: 0.4, ease: "easeOut" },
     },
   };
 
@@ -194,7 +193,7 @@ export function Products() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2 mb-6 border border-blue-300"
           >
             <Flame className="w-4 h-4 text-blue-700" strokeWidth={1.5} />
@@ -204,7 +203,7 @@ export function Products() {
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-700 to-blue-600 bg-clip-text text-transparent mb-6"
           >
             Nutrition & Wellness Products
@@ -212,7 +211,7 @@ export function Products() {
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-normal"
           >
             Premium products crafted with science and natural ingredients. Trusted by 10L+ customers worldwide.
