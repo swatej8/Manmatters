@@ -6,7 +6,13 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = ['Hair', 'Beard', 'Performance', 'Skin', 'Hygiene'];
+  const navItems = [
+    {name: 'Hair', redirect: '#hair'},
+    {name: 'Beard', redirect: '#beard'},
+    {name: 'Performance', redirect: '#performance'},
+    {name: 'Skin', redirect: '#skin'},
+    {name: 'Hygiene', redirect: '#hygiene'},
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,13 +46,13 @@ export function Header() {
             {navItems.map((item, index) => (
               <motion.a
                 key={item}
-                href="#"
+                href={item.redirect}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="text-gray-700 font-medium text-lg hover:text-blue-700 transition-colors duration-300 relative group"
               >
-                {item}
+                {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-blue-600 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
@@ -82,11 +88,11 @@ export function Header() {
             {navItems.map((item) => (
               <a
                 key={item}
-                href="#"
+                href={item.redirect}
                 className="block text-gray-700 font-semibold hover:text-blue-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                {item}
+                {item.name}
               </a>
             ))}
             <button className="w-full px-6 py-2 bg-gradient-to-r from-blue-700 to-blue-600 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300">

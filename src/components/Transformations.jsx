@@ -82,15 +82,16 @@ export function Transformations() {
 
   return (
     <section
+    id='skin'
       ref={sectionRef}
-      className="py-24 px-4 bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden"
+      className="scroll-mt-10 py-24 px-4 bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden"
     >
       {/* Background decoration */}
       <motion.div
         animate={{ y: [0, 30, 0] }}
         transition={{ duration: 8, repeat: Infinity }}
         className="absolute top-20 right-10 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl"
-      />
+      />  
       <motion.div
         animate={{ y: [0, -30, 0] }}
         transition={{ duration: 10, repeat: Infinity, delay: 1 }}

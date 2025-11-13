@@ -182,7 +182,8 @@ export function Products() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden"
+      id='beard'
+      className="scroll-mt-10 py-24 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden"
     >
       <div className="container mx-auto">
         {/* Section Header */}

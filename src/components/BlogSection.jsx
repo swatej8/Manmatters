@@ -73,7 +73,7 @@ export function BlogSection() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id='performance' className="scroll-mt-10 py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background decoration */}
       <motion.div
         animate={{ rotate: 360 }}

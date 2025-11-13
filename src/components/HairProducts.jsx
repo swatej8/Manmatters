@@ -116,7 +116,7 @@ export function HairProducts() {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <section id="hair" ref={sectionRef} className="scroll-mt-10 py-20 px-4 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div

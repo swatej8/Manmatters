@@ -80,7 +80,7 @@ export function Features() {
   };
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id='perfromance' className="scroll-mt-10 py-24 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background animations */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
